@@ -12,14 +12,14 @@ namespace Nemesis.Brain
             public int trust;
         };
 
-        private List<OtherChicken> friends;
-        private List<OtherChicken> foes;
+        protected List<OtherChicken> friends;
+        protected List<OtherChicken> foes;
 
-        private int fear;
+        protected int fear;
 
         public Chicken(){}
 
-        private int randVal(int N) {
+        protected int randVal(int N) {
             Random rg = new System.Random();
             return rg.Next(N);
         }

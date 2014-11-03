@@ -1,1 +1,60 @@
- 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Nemesis.Modules.OgreEventArgs">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAABAAAAAAAAEAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Modules\OgreEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nemesis.Modules.OgreManager">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQLEAAAEAAQBAAIABABAQABAQAAIBIAAAAECAAQQAA=</HashCode>
+      <FileName>Modules\OgreManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nemesis.Modules.ResourceConfig">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAFAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modules\ResourceConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nemesis.Modules.ResourceManager">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwACAAQAAAAAACAAAAACQABAABIIAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Modules\ResourceManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nemesis.Modules.State">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAQAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modules\State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nemesis.Modules.StateManager">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAYAAAAAAAAAAEAAAABAAQAAAAQAIAAABAAAAAAAAAA=</HashCode>
+      <FileName>Modules\StateManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nemesis.Program">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAgAIAAgAAAgABAAAAGA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nemesis.States.TurningHead">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAAAAAQAAAAgAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>States\TurningHead.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
