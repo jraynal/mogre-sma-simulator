@@ -3,7 +3,7 @@
 using Mogre;
 
 
-namespace Quickstart2010
+namespace Nemesis
 {
   public class Program
   {
