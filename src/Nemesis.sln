@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nemesis", "Nemesis.csproj", "{6A286245-E004-447F-A3B2-4E62472653F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nemesis", "Nemesis\Nemesis.csproj", "{6A286245-E004-447F-A3B2-4E62472653F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

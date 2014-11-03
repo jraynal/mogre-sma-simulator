@@ -1,0 +1,5 @@
+C:\Users\foaly\Desktop\mogre-mogrequickstart-535dc4179b3c\mogre-mogrequickstart-535dc4179b3c\Quickstart2010\Quickstart2010\bin\Debug\Quickstart2010.exe
+C:\Users\foaly\Desktop\mogre-mogrequickstart-535dc4179b3c\mogre-mogrequickstart-535dc4179b3c\Quickstart2010\Quickstart2010\bin\Debug\Quickstart2010.pdb
+C:\Users\foaly\Desktop\mogre-mogrequickstart-535dc4179b3c\mogre-mogrequickstart-535dc4179b3c\Quickstart2010\Quickstart2010\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\foaly\Desktop\mogre-mogrequickstart-535dc4179b3c\mogre-mogrequickstart-535dc4179b3c\Quickstart2010\Quickstart2010\obj\x86\Debug\Quickstart2010.exe
+C:\Users\foaly\Desktop\mogre-mogrequickstart-535dc4179b3c\mogre-mogrequickstart-535dc4179b3c\Quickstart2010\Quickstart2010\obj\x86\Debug\Quickstart2010.pdb
