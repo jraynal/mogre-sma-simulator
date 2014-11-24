@@ -6,39 +6,88 @@ using System.Text;
 namespace Nemesis.Brain
 {
     abstract class Chicken
-    { 
-        private struct OtherChicken {
+    {
+        protected List<possibleChoice> myChoiceOpinion = new List<possibleChoice>();
+        protected List<OtherChicken> friends = new List<OtherChicken>();
+        protected List<OtherChicken> foes = new List<OtherChicken>();
+        protected struct OtherChicken {
             public Chicken chick;
             public int trust;
         };
 
-        protected List<OtherChicken> friends;
-        protected List<OtherChicken> foes;
+        protected class possibleChoice
+        {
+            public Choice choice;
+            public int opinion;
+            public possibleChoice(Choice choice, int opinion)
+            {
+                this.choice = choice;
+                this.opinion = opinion;
+            }
+            public void changeOpinion(Choice choice, int modif) {
+                if (this.choice.Equals(choice)) {
+                    this.opinion += modif;
+                }
+            } 
+        };
+
+        protected int sortChoices(possibleChoice A, possibleChoice B)
+        {
+
+            if (A.opinion > B.opinion)
+                return 1;
+            return 0;
+        }
+
+        protected void makeMyChoiceOpinion(List<Choice> choices)
+        {
+            foreach (Choice choice in choices)
+            {
+                possibleChoice op = new possibleChoice(choice, randVal(50) - 25);
+                myChoiceOpinion.Add(op);
+            }
+            myChoiceOpinion.Sort(sortChoices);
+        }
 
         protected int fear;
 
         public Chicken(){}
 
         protected int randVal(int N) {
-            Random rg = new System.Random();
-            return rg.Next(N);
+            return Program.GlobalRandomGenerator.Next(N);
+        }
+
+        public int getFear() {
+            return this.fear;
         }
 
         public void discoverArea(List<Chicken> mates) {
+            Console.WriteLine("I am discovering the area");
             foreach (Chicken chick in mates ) {
-                int trust=randVal(100);
-                OtherChicken ochick=new OtherChicken();
-                ochick.chick = chick;
-                ochick.trust = trust;
-                if (trust > 50)
-                    friends.Add(ochick);
-                else
-                    foes.Add(ochick);
+                if (!chick.Equals(this))
+                {
+                    int trust = randVal(100);
+                    OtherChicken ochick = new OtherChicken();
+                    ochick.chick = chick;
+                    ochick.trust = trust;
+                    Console.WriteLine(trust);
+                    String message;
+                    if (trust > 40) {
+                        friends.Add(ochick);
+                        message="Added Friend";
+                    } else {
+                        foes.Add(ochick);
+                        message="Added Foe";
+                    }
+                    Console.WriteLine(message);
+                }
             }
+            Console.ReadLine();
         }
 
-        public void discuss();
-        public void vote();
-        public void decide();
+        public abstract void giveAdvice(List<Chicken> mates, List<Choice> choices);
+        public abstract void getAdvice(Chicken chick, List<Choice> choices, Choice choice);
+        public abstract void vote(List<Vote> votes);
+        public abstract void decide(Vote groupDecision, List<Choice> choices);
     }
 }

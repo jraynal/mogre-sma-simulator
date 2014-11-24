@@ -56,5 +56,38 @@
       <FileName>States\TurningHead.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Nemesis.Brain.BoldChicken">
+    <Position X="11.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAACAAAAAAAAAAAAAABAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Brain\BoldChicken.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nemesis.Brain.Chicken">
+    <Position X="8.5" Y="4.75" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="Nemesis.Brain.Chicken.OtherChicken" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Brain\Chicken.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Class Name="Nemesis.Brain.Chicken.possibleChoice" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Brain\Chicken.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BAEEAgCACACAAAAAAAAAAgABAAAAgAAAEAAAAACEAAA=</HashCode>
+      <FileName>Brain\Chicken.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nemesis.Brain.Choice" Collapsed="true">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Brain\Choice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
