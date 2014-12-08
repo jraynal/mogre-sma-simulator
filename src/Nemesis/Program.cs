@@ -1,14 +1,18 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using Mogre;
 
 using Nemesis.Modules;
 using Nemesis.States;
+using Nemesis.Brain;
 
 namespace Nemesis
 {
-    public class Program
-    {
+  public class Program
+  {
+      public static Random GlobalRandomGenerator = new System.Random();
         //////////////////////////////////////////////////////////////////////////
         private static OgreManager mEngine;
         private static StateManager mStateMgr;
@@ -59,6 +63,7 @@ namespace Nemesis
 
       // shutdown Ogre
       mEngine.Shutdown();
+
     }
 
     /************************************************************************/
@@ -66,13 +71,14 @@ namespace Nemesis
     /************************************************************************/
     public Program()
     {
-      mLight1 = null;
-      mLight2 = null;
+    mLight1 = null;
+    mLight2 = null;
     }
 
     /************************************************************************/
     /* create a scene to render                                             */
     /************************************************************************/
+
     public void CreateScene()
     {
       // set a dark ambient light
@@ -134,7 +140,6 @@ namespace Nemesis
         mLight1 = null;
       }
     }
-
   } // class
 
 } // namespace

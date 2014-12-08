@@ -7,14 +7,22 @@ namespace Nemesis.Brain
 {
     class Choice
     {
-        private int value;
-
-        public Choice(int value) {
-            this.value = value;
+        private int votes;
+        private Coord dir;
+        public Choice(Coord dir) {
+            this.dir = dir;
         }
 
-        public int getVal() {
-            return value;
+        public Coord getDir() {
+            return dir;
+        }
+
+        public void vote() {
+            this.votes++;
+        }
+
+        public int getVotes() {
+            return votes;
         }
     }
 }

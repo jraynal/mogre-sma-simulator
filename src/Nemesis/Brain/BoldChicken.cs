@@ -38,15 +38,15 @@ namespace Nemesis.Brain
             return;
         }
 
-        public override void vote(List<Vote> votes)
+        public override void vote()
         {
             // Vote pour le premier des choix
-            votes.ForEach((Vote vote) => vote.voted(myChoiceOpinion.First().choice));
+            myChoiceOpinion.First().choice.vote();
         }
 
-        public override void decide(Vote groupDecision, List<Choice> choices) {
+        public override void decide(Choice groupVote) {
             // Prend la direction de ses amis
-
+            updateGoal(groupVote.getDir());
             // Si la décision du groupe est différente de la mienne, je perd confiance
                 // Si ma confiance est trop basse, je quitte le groupe, j'ai plus peur
             // Sinon Je suis content, ma confiance remonte

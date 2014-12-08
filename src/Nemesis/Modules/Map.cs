@@ -44,5 +44,10 @@ namespace Nemesis.Modules
         {
             mHeight = height;
         }*/
+
+        public Tile tile(Coord coord)
+        {
+            return mTiles[coord.y()][coord.x()];
+        }
     }
 }
