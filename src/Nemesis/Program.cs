@@ -5,6 +5,7 @@ using System.Text;
 using Mogre;
 
 using Nemesis.Modules;
+using Nemesis.States;
 using Nemesis.Brain;
 
 namespace Nemesis
