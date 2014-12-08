@@ -7,6 +7,10 @@ namespace Nemesis.Brain
 {
     abstract class Chicken
     {
+        private Coord pos;
+        private Coord goal;
+        protected int fear;
+        protected int groupAverageTrust=0;
         protected List<possibleChoice> myChoiceOpinion = new List<possibleChoice>();
         protected List<OtherChicken> friends = new List<OtherChicken>();
         protected List<OtherChicken> foes = new List<OtherChicken>();
@@ -49,8 +53,6 @@ namespace Nemesis.Brain
             myChoiceOpinion.Sort(sortChoices);
         }
 
-        protected int fear;
-
         public Chicken(){}
 
         protected int randVal(int N) {
@@ -62,7 +64,7 @@ namespace Nemesis.Brain
         }
 
         public void discoverArea(List<Chicken> mates) {
-            Console.WriteLine("I am discovering the area");
+            int trustSum=0, count=1;
             foreach (Chicken chick in mates ) {
                 if (!chick.Equals(this))
                 {
@@ -70,24 +72,35 @@ namespace Nemesis.Brain
                     OtherChicken ochick = new OtherChicken();
                     ochick.chick = chick;
                     ochick.trust = trust;
-                    Console.WriteLine(trust);
-                    String message;
                     if (trust > 40) {
                         friends.Add(ochick);
-                        message="Added Friend";
                     } else {
                         foes.Add(ochick);
-                        message="Added Foe";
                     }
-                    Console.WriteLine(message);
+                    trustSum += trust;
+                    count++;
                 }
             }
-            Console.ReadLine();
+            groupAverageTrust = trustSum / count;
+        }
+
+        public Coord getPos() {
+            return this.pos;
+        }
+
+        public Coord getGoal() {
+            return this.goal;
+        }
+
+        public void updateGoal(Coord pos) {
+            this.pos = this.goal;
+            this.goal = pos;
+            return;
         }
 
         public abstract void giveAdvice(List<Chicken> mates, List<Choice> choices);
         public abstract void getAdvice(Chicken chick, List<Choice> choices, Choice choice);
-        public abstract void vote(List<Vote> votes);
-        public abstract void decide(Vote groupDecision, List<Choice> choices);
+        public abstract void vote();
+        public abstract void decide(Choice groupVote);
     }
 }
