@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+<<<<<<< HEAD
+=======
 using Nemesis.Modules;
+>>>>>>> 7f95ddd2628c6a57558d3703326cb6413e50d8ea
 
 namespace Nemesis.Brain
 {
