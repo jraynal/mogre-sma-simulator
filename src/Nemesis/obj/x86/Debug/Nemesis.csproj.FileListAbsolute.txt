@@ -1,0 +1,10 @@
+C:\Users\foaly\Desktop\nemesis\src\Nemesis\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\foaly\Desktop\nemesis\src\Nemesis\obj\x86\Debug\Quickstart2010.exe
+C:\Users\foaly\Desktop\nemesis\src\Nemesis\obj\x86\Debug\Quickstart2010.pdb
+C:\Users\foaly\Desktop\nemesis\src\Nemesis\bin\Debug\Quickstart2010.exe
+C:\Users\foaly\Desktop\nemesis\src\Nemesis\bin\Debug\Quickstart2010.pdb
+C:\Users\RaynalJR\Documents\Visual Studio 2010\Projects\Nemesis\nemesis\src\Nemesis\obj\x86\Debug\Nemesis.csprojResolveAssemblyReference.cache
+C:\Users\RaynalJR\Documents\Visual Studio 2010\Projects\Nemesis\nemesis\src\Nemesis\bin\Debug\Nemesis.exe
+C:\Users\RaynalJR\Documents\Visual Studio 2010\Projects\Nemesis\nemesis\src\Nemesis\bin\Debug\Nemesis.pdb
+C:\Users\RaynalJR\Documents\Visual Studio 2010\Projects\Nemesis\nemesis\src\Nemesis\obj\x86\Debug\Nemesis.exe
+C:\Users\RaynalJR\Documents\Visual Studio 2010\Projects\Nemesis\nemesis\src\Nemesis\obj\x86\Debug\Nemesis.pdb
