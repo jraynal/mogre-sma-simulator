@@ -5,10 +5,7 @@ using System.Text;
 using Mogre;
 
 using Nemesis.Modules;
-<<<<<<< HEAD
 using Nemesis.States;
-=======
->>>>>>> 7f95ddd2628c6a57558d3703326cb6413e50d8ea
 using Nemesis.Brain;
 
 namespace Nemesis
@@ -16,15 +13,8 @@ namespace Nemesis
   public class Program
   {
       public static Random GlobalRandomGenerator = new System.Random();
-<<<<<<< HEAD
-        //////////////////////////////////////////////////////////////////////////
-=======
-      //////////////////////////////////////////////////////////////////////////
->>>>>>> 7f95ddd2628c6a57558d3703326cb6413e50d8ea
         private static OgreManager mEngine;
         private static StateManager mStateMgr;
-
-        //////////////////////////////////////////////////////////////////////////
         private Light mLight1;
         private Light mLight2;
 
