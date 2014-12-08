@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Nemesis.Modules;
 
 namespace Nemesis.Brain
 {
