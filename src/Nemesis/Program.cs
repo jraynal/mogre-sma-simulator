@@ -7,15 +7,17 @@ using Nemesis.States;
 
 namespace Nemesis
 {
-  public class Program
-  {
-    //////////////////////////////////////////////////////////////////////////
-    private static OgreManager mEngine;
-    private static StateManager mStateMgr;
+    public class Program
+    {
+        //////////////////////////////////////////////////////////////////////////
+        private static OgreManager mEngine;
+        private static StateManager mStateMgr;
 
-    //////////////////////////////////////////////////////////////////////////
-    private Light mLight1;
-    private Light mLight2;
+        //////////////////////////////////////////////////////////////////////////
+        private Light mLight1;
+        private Light mLight2;
+
+        private Double mCameraAngle;
 
     /************************************************************************/
     /* program starts here                                                  */
@@ -33,7 +35,7 @@ namespace Nemesis
       Program prg = new Program();
 
       // try to initialize Ogre and the state manager
-      if( mEngine.Startup() && mStateMgr.Startup( typeof( TurningHead ) ) )
+      if( mEngine.Startup() && mStateMgr.Startup( typeof( InGame ) ) )
       {
         // create objects in scene
         prg.CreateScene();
@@ -77,7 +79,7 @@ namespace Nemesis
       mEngine.SceneMgr.AmbientLight = new ColourValue( 0.1f, 0.1f, 0.1f );
 
       // place the camera to a better position
-      mEngine.Camera.Position = new Vector3( 0.0f, 25.0f, 100.0f );
+      mEngine.Camera.Position = new Vector3( 0.0f, 5.0f, 10.0f );
       mEngine.Camera.LookAt( new Vector3() );
 
       // create one bright front light
@@ -100,8 +102,13 @@ namespace Nemesis
     /************************************************************************/
     public void UpdateScene()
     {
-      // update the state manager, this will automatically update the active state
-      mStateMgr.Update( 0 );
+        // update the state manager, this will automatically update the active state
+        mStateMgr.Update( 0 );
+
+        mCameraAngle += 0.01f;
+        mCameraAngle %= 360;
+        mEngine.Camera.Position = new Vector3(10 * (float)System.Math.Cos(mCameraAngle), 10.0f, 10 * (float)System.Math.Sin(mCameraAngle));
+        mEngine.Camera.LookAt(new Vector3());
     }
 
     /************************************************************************/

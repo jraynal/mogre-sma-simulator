@@ -1,5 +1,5 @@
-C:\Users\foaly\Desktop\nemesis\src\Nemesis\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\foaly\Desktop\nemesis\src\Nemesis\obj\x86\Debug\Quickstart2010.exe
 C:\Users\foaly\Desktop\nemesis\src\Nemesis\obj\x86\Debug\Quickstart2010.pdb
 C:\Users\foaly\Desktop\nemesis\src\Nemesis\bin\Debug\Quickstart2010.exe
 C:\Users\foaly\Desktop\nemesis\src\Nemesis\bin\Debug\Quickstart2010.pdb
+C:\Users\foaly\Desktop\nemesis\src\Nemesis\obj\x86\Debug\Nemesis.csprojResolveAssemblyReference.cache

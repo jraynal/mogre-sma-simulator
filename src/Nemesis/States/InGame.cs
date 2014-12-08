@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 
 using Mogre;
 
@@ -9,21 +11,19 @@ namespace Nemesis.States
   /************************************************************************/
   /* program state that just shows a turning ogre head                    */
   /************************************************************************/
-  public class TurningHead : State
+  public class InGame : State
   {
     //////////////////////////////////////////////////////////////////////////
     private OgreManager mEngine;
 
-    //////////////////////////////////////////////////////////////////////////
-    private SceneNode mOgreHead;
+    private List<SceneNode> mMapTiles = new List<SceneNode>();
 
     /************************************************************************/
     /* constructor                                                          */
     /************************************************************************/
-    public TurningHead()
+    public InGame()
     {
       mEngine = null;
-      mOgreHead = null;
     }
 
     /************************************************************************/
@@ -31,15 +31,36 @@ namespace Nemesis.States
     /************************************************************************/
     public override bool Startup( StateManager _mgr )
     {
-      // store reference to engine, this state does not need to store the state manager reference
-      mEngine = _mgr.Engine;
+        // store reference to engine, this state does not need to store the state manager reference
+        mEngine = _mgr.Engine;
 
-      // create the ogre head and add the object to the current scene
-      mOgreHead = mEngine.CreateSimpleObject( "Ogre", "ogrehead.mesh" );
-      mEngine.AddObjectToScene( mOgreHead );
+        if (File.Exists("map.txt"))
+        {
+            using (TextReader reader = File.OpenText("map.txt"))
+            {
 
-      // OK
-      return true;
+                /*byte[] buffer = new byte[1];
+                while (fs.Read(buffer, 0, buffer.Length) > 0)
+                {
+                    if (byte[0] == '0') {
+                        SceneNode tile = mEngine.CreateSimpleObject("Droit", "droit.mesh");
+                        if (tile != null)
+                        {
+                            mMapTiles.Add(tile);
+                            mEngine.AddObjectToScene(tile);
+                        }
+                    }
+                }*/
+            }
+        }
+        
+        // OK
+        return true;
+    }
+
+    private void CreateMap()
+    {
+
     }
 
     /************************************************************************/
@@ -47,14 +68,11 @@ namespace Nemesis.States
     /************************************************************************/
     public override void Shutdown()
     {
-      // check if ogre head exists
-      if( mOgreHead != null )
-      {
-        // remove ogre head from scene and destroy it
-        mEngine.RemoveObjectFromScene( mOgreHead );
-        mEngine.DestroyObject( mOgreHead );
-        mOgreHead = null;
-      }
+        foreach(SceneNode tile in mMapTiles)
+        {
+            mEngine.RemoveObjectFromScene(tile);
+            mEngine.DestroyObject(tile);
+        }
     }
 
     /************************************************************************/
@@ -63,11 +81,11 @@ namespace Nemesis.States
     public override void Update( long _frameTime )
     {
       // check if ogre head exists
-      if( mOgreHead != null )
+      /*if( mOgreHead != null )
       {
         // rotate the ogre head a little bit
         mOgreHead.Rotate( Vector3.UNIT_Y, new Radian( new Degree( 0.5f ) ) );
-      }
+      }*/
     }
 
   } // class

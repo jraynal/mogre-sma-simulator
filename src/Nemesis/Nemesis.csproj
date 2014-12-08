@@ -48,15 +48,18 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modules\Coord.cs" />
+    <Compile Include="Modules\Map.cs" />
     <Compile Include="Modules\OgreEventArgs.cs" />
     <Compile Include="Modules\OgreManager.cs" />
     <Compile Include="Modules\ResourceConfig.cs" />
     <Compile Include="Modules\ResourceManager.cs" />
     <Compile Include="Modules\State.cs" />
     <Compile Include="Modules\StateManager.cs" />
+    <Compile Include="Modules\Tile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="States\TurningHead.cs" />
+    <Compile Include="States\InGame.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
