@@ -52,10 +52,10 @@
     <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Brain\Barnyard.cs" />
     <Compile Include="Brain\BoldChicken.cs" />
     <Compile Include="Brain\Chicken.cs" />
     <Compile Include="Brain\Choice.cs" />
-    <Compile Include="Brain\Vote.cs" />
     <Compile Include="Modules\OgreEventArgs.cs" />
     <Compile Include="Modules\OgreManager.cs" />
     <Compile Include="Modules\ResourceConfig.cs" />
